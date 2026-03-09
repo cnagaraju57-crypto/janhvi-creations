@@ -7,63 +7,52 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400;600;700&display=swap');
         
-        body { margin: 0; font-family: 'Poppins', sans-serif; background-color: #f4f7f6; color: #333; scroll-behavior: smooth; }
+        body { margin: 0; font-family: 'Poppins', sans-serif; background-color: #f0f2f5; color: #333; scroll-behavior: smooth; }
 
-        /* Navigation Bar */
+        /* Navigation */
         .navbar { background: #fff; padding: 15px 50px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 10px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000; }
-        .nav-links a { text-decoration: none; color: #333; margin: 0 15px; font-weight: 600; font-size: 0.9rem; }
+        .nav-links a { text-decoration: none; color: #1e469a; margin: 0 15px; font-weight: 700; }
 
-        /* Header with Circle Photo */
+        /* Header */
         .header-section { 
-            background: linear-gradient(rgba(30, 70, 154, 0.85), rgba(30, 70, 154, 0.85)), url('https://via.placeholder.com/1920x400?text=Creative+Design+Studio');
-            background-size: cover; background-position: center; padding: 50px 20px; color: white; text-align: center; border-bottom: 5px solid #f1c40f;
-            display: flex; align-items: center; justify-content: center; gap: 30px;
+            background: linear-gradient(rgba(30, 70, 154, 0.9), rgba(30, 70, 154, 0.9)), url('https://via.placeholder.com/1920x400');
+            background-size: cover; padding: 60px 20px; color: white; text-align: center; border-bottom: 5px solid #f1c40f;
+            display: flex; align-items: center; justify-content: center; gap: 30px; flex-wrap: wrap;
         }
-        .header-img-circle { 
-            width: 130px; height: 130px; border-radius: 50%; border: 4px solid #f1c40f; 
-            overflow: hidden; background-color: #fff; box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-        }
+        .header-img-circle { width: 130px; height: 130px; border-radius: 50%; border: 4px solid #f1c40f; overflow: hidden; background: #fff; }
         .header-img-circle img { width: 100%; height: 100%; object-fit: cover; }
-        .header-title { font-family: 'Dancing Script', cursive; font-size: 3.5rem; margin: 0; color: #f1c40f; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); }
+        .header-title { font-family: 'Dancing Script', cursive; font-size: 3.5rem; margin: 0; color: #f1c40f; }
 
-        .scrolling-bar { background: #f1c40f; color: #1e469a; padding: 12px; font-weight: bold; text-align: center; }
+        .scrolling-bar { background: #f1c40f; color: #1e469a; padding: 12px; font-weight: bold; font-size: 1.1rem; }
 
-        /* Designer Grid */
+        /* Main Grid */
         .section-container { max-width: 1200px; margin: 40px auto; padding: 0 20px; }
-        .section-header { display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid #1e469a; padding-bottom: 10px; margin-bottom: 25px; }
-        .section-header h2 { margin: 0; font-size: 1.4rem; color: #1e469a; text-transform: uppercase; }
+        .section-header { border-bottom: 3px solid #1e469a; padding-bottom: 10px; margin-bottom: 30px; color: #1e469a; }
 
-        .designer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+        .designer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
+        
+        /* Box Style with Sample Image */
         .work-box { 
-            padding: 45px 20px; border-radius: 20px; color: white; cursor: pointer; 
-            transition: 0.4s; font-size: 1.4rem; font-weight: 700; box-shadow: 0 8px 15px rgba(0,0,0,0.1);
-            display: flex; align-items: center; gap: 15px;
+            background: white; border-radius: 20px; overflow: hidden; cursor: pointer; 
+            transition: 0.4s; box-shadow: 0 8px 15px rgba(0,0,0,0.1); text-align: center;
         }
-        .work-box:hover { transform: translateY(-8px); box-shadow: 0 12px 25px rgba(0,0,0,0.2); }
-        .icon-lg { font-size: 2.8rem; }
+        .work-box:hover { transform: translateY(-10px); }
+        .box-preview-img { width: 100%; height: 150px; object-fit: cover; background: #eee; border-bottom: 4px solid #f1c40f; }
+        .box-title { padding: 20px; font-size: 1.3rem; font-weight: 700; color: #1e469a; display: flex; align-items: center; justify-content: center; gap: 10px; }
 
-        /* Category Colors */
-        .bg-flex { background: linear-gradient(45deg, #007bff, #00c6ff); }
-        .bg-logo { background: linear-gradient(45deg, #FF512F, #DD2476); }
-        .bg-office { background: linear-gradient(45deg, #2ecc71, #27ae60); }
-        .bg-status { background: linear-gradient(45deg, #f39c12, #e67e22); }
-        .bg-album { background: linear-gradient(45deg, #9b59b6, #8e44ad); }
-        .bg-wc { background: linear-gradient(45deg, #e74c3c, #c0392b); }
-        .bg-death { background: linear-gradient(45deg, #34495e, #2c3e50); }
+        /* Product Display */
+        .product-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 20px; display: none; }
+        .product-card { background: #fff; border-radius: 15px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.08); transition: 0.3s; cursor: pointer; border: 1px solid #eee; }
+        .product-card img { width: 100%; height: 200px; object-fit: cover; }
+        .product-info { padding: 15px; text-align: center; }
+        .price-tag { color: #e74c3c; font-weight: bold; font-size: 1.2rem; }
 
-        /* Sub-Menu Cards */
-        .product-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 20px; display: none; }
-        .product-card { background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.05); transition: 0.3s; cursor: pointer; border: 1px solid #eee; text-align: center; }
-        .product-card img { width: 100%; height: 160px; object-fit: cover; }
-        .product-info { padding: 15px; }
-        .price-tag { color: #e74c3c; font-weight: bold; font-size: 1.1rem; }
+        .back-btn { background: #1e469a; color: white; padding: 12px 30px; border-radius: 50px; cursor: pointer; display: none; margin-bottom: 30px; font-weight: bold; width: fit-content; }
 
-        .back-btn { background: #333; color: white; padding: 10px 25px; border-radius: 50px; cursor: pointer; display: none; margin-bottom: 25px; font-weight: bold; width: fit-content; }
-
-        /* Popup */
-        .overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.85); z-index: 2000; }
-        .display-container { display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 90%; max-width: 500px; background: white; padding: 30px; border-radius: 20px; z-index: 2100; text-align: center; }
-        .whatsapp-btn { background: #25d366; color: white; padding: 14px 35px; border-radius: 50px; text-decoration: none; font-weight: bold; display: inline-block; margin-top: 20px; }
+        /* Modal */
+        .overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); z-index: 2000; }
+        .display-container { display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 90%; max-width: 500px; background: white; padding: 25px; border-radius: 20px; z-index: 2100; text-align: center; }
+        .whatsapp-btn { background: #25d366; color: white; padding: 15px 40px; border-radius: 50px; text-decoration: none; font-weight: bold; display: inline-block; margin-top: 20px; }
 
         footer { background: #1e469a; color: white; text-align: center; padding: 40px; margin-top: 50px; }
     </style>
@@ -71,91 +60,108 @@
 <body>
 
 <div class="navbar">
-    <div style="font-weight: 800; font-size: 1.2rem; color: #1e469a;">JANHVI CREATIONS</div>
-    <div class="nav-links"><a href="#" onclick="location.reload()">HOME</a><a href="#">ABOUT</a><a href="#">CONTACT</a></div>
+    <div style="font-weight: 800; font-size: 1.3rem; color: #1e469a;">JANHVI CREATIONS</div>
+    <div class="nav-links"><a href="#" onclick="location.reload()">HOME</a><a href="#">CONTACT</a></div>
 </div>
 
 <header class="header-section">
-    <div class="header-img-circle"><img src="janhvi.jpg" alt="Janhvi"></div>
+    <div class="header-img-circle"><img src="janhvi.jpg" alt="Logo"></div>
     <div>
         <h1 class="header-title">Janhvi Creations</h1>
-        <p>Your One-Stop Graphics & DTP Solution</p>
+        <p>Expert Graphics & WhatsApp Status Maker</p>
     </div>
-    <div class="header-img-circle"><img src="janhvi.jpg" alt="Janhvi"></div>
+    <div class="header-img-circle"><img src="janhvi.jpg" alt="Logo"></div>
 </header>
 
 <div class="scrolling-bar">
-    <marquee>⭐ Flex Banners | Logo Designs | MS Office Works | WhatsApp Status | Album Designs | Wedding Cards | Call: 7702317640 ⭐</marquee>
+    <marquee scrollamount="8">⭐ మా వద్ద ఇన్విటేషన్ కార్డ్స్, వాట్సాప్ వీడియో స్టేటస్, ఫ్లెక్స్ బ్యానర్లు మరియు అన్ని రకాల డిజైనింగ్ పనులు చేయబడును. కాల్: 7702317640 ⭐</marquee>
 </div>
 
 <div class="section-container" id="main-view">
-    <div class="section-header"><h2>Our Services</h2></div>
+    <div class="section-header"><h2>మా సేవలు (Our Services)</h2></div>
     <div class="designer-grid">
-        <div class="work-box bg-flex" onclick="showCategory('flex-list')"><span class="icon-lg">🚩</span> Flex Banners</div>
-        <div class="work-box bg-logo" onclick="showCategory('logo-list')"><span class="icon-lg">💎</span> Logo Designs</div>
-        <div class="work-box bg-office" onclick="showCategory('office-list')"><span class="icon-lg">📄</span> MS Office Works</div>
-        <div class="work-box bg-status" onclick="showCategory('status-list')"><span class="icon-lg">📱</span> Status Maker</div>
-        <div class="work-box bg-album" onclick="showCategory('album-list')"><span class="icon-lg">📖</span> Album Designs</div>
-        <div class="work-box bg-wc" onclick="showCategory('wc-list')"><span class="icon-lg">✉️</span> Wedding Cards</div>
-        <div class="work-box bg-death" onclick="showCategory('death-list')"><span class="icon-lg">🕯️</span> Death Designs</div>
+        <div class="work-box" onclick="showCategory('flex-list')">
+            <img src="flex_sample.jpg" class="box-preview-img" alt="Flex PSD">
+            <div class="box-title">🚩 Flex Banners</div>
+        </div>
+        <div class="work-box" onclick="showCategory('invitation-list')">
+            <img src="invitation_psd.jpg" class="box-preview-img" alt="Invitation PSD">
+            <div class="box-title">✉️ Invitation Cards</div>
+        </div>
+        <div class="work-box" onclick="showCategory('status-list')">
+            <img src="status_sample.jpg" class="box-preview-img" alt="Status PSD">
+            <div class="box-title">📱 WhatsApp Status</div>
+        </div>
+        <div class="work-box" onclick="showCategory('pamphlet-list')">
+            <img src="pamphlet_psd.jpg" class="box-preview-img" alt="Pamphlet PSD">
+            <div class="box-title">📄 Pamphlets</div>
+        </div>
+        <div class="work-box" onclick="showCategory('frame-list')">
+            <img src="frame_psd.jpg" class="box-preview-img" alt="Frame PSD">
+            <div class="box-title">🖼️ Photo Frames</div>
+        </div>
+        <div class="work-box" onclick="showCategory('logo-list')">
+            <img src="logo_psd.jpg" class="box-preview-img" alt="Logo PSD">
+            <div class="box-title">💎 Logo Designs</div>
+        </div>
     </div>
 </div>
 
 <div class="section-container" id="category-view" style="display:none;">
-    <div class="back-btn" id="back-btn" onclick="goHome()">← Back to Menu</div>
+    <div class="back-btn" onclick="goHome()">← Back to Menu</div>
     
     <div id="flex-list" class="product-grid">
-        <div class="product-card" onclick="openPreview('flex_pol')"><img src="kashi.jpg"> <div class="product-info"><h3>Political Flex</h3><div class="price-tag">₹149/-</div></div></div>
+        <div class="product-card" onclick="openPreview('flex_1')"><img src="flex_sample.jpg"><div class="product-info"><h3>Political Flex</h3><div class="price-tag">₹149/-</div></div></div>
     </div>
-    <div id="logo-list" class="product-grid">
-        <div class="product-card" onclick="openPreview('logo_pro')"><img src="logo.jpg"> <div class="product-info"><h3>Pro Logo Design</h3><div class="price-tag">₹149/-</div></div></div>
+
+    <div id="invitation-list" class="product-grid">
+        <div class="product-card" onclick="openPreview('inv_1')"><img src="invitation_psd.jpg"><div class="product-info"><h3>Wedding Card</h3><div class="price-tag">₹199/-</div></div></div>
     </div>
-    <div id="office-list" class="product-grid">
-        <div class="product-card" onclick="openPreview('office_dtp')"><img src="https://via.placeholder.com/300x200?text=MS+Word+Works"> <div class="product-info"><h3>MS Word & Excel DTP</h3><div class="price-tag">₹99/-</div></div></div>
-    </div>
+
     <div id="status-list" class="product-grid">
-        <div class="product-card" onclick="openPreview('status_vid')"><img src="https://via.placeholder.com/300x200?text=WhatsApp+Status"> <div class="product-info"><h3>Video Status Creation</h3><div class="price-tag">₹49/-</div></div></div>
+        <div class="product-card" onclick="openPreview('sts_1')"><img src="status_sample.jpg"><div class="product-info"><h3>Video Status</h3><div class="price-tag">₹99/-</div></div></div>
     </div>
-    <div id="album-list" class="product-grid">
-        <div class="product-card" onclick="openPreview('album_des')"><img src="https://via.placeholder.com/300x200?text=Album+Design"> <div class="product-info"><h3>Wedding Album Design</h3><div class="price-tag">₹299/-</div></div></div>
+
+    <div id="pamphlet-list" class="product-grid">
+        <div class="product-card" onclick="openPreview('pam_1')"><img src="pamphlet_psd.jpg"><div class="product-info"><h3>Business Pamphlet</h3><div class="price-tag">₹149/-</div></div></div>
     </div>
-    <div id="wc-list" class="product-grid">
-        <div class="product-card" onclick="openPreview('wc_card')"><img src="invitation.jpg"> <div class="product-info"><h3>Wedding Card</h3><div class="price-tag">₹149/-</div></div></div>
+
+    <div id="frame-list" class="product-grid">
+        <div class="product-card" onclick="openPreview('frm_1')"><img src="frame_psd.jpg"><div class="product-info"><h3>Photo Frame</h3><div class="price-tag">₹299/-</div></div></div>
     </div>
-    <div id="death-list" class="product-grid">
-        <div class="product-card" onclick="openPreview('death_ban')"><img src="https://via.placeholder.com/300x200?text=Memorial+Banner"> <div class="product-info"><h3>Death Banner</h3><div class="price-tag">₹99/-</div></div></div>
+
+    <div id="logo-list" class="product-grid">
+        <div class="product-card" onclick="openPreview('log_1')"><img src="logo_psd.jpg"><div class="product-info"><h3>Pro Logo</h3><div class="price-tag">₹149/-</div></div></div>
     </div>
 </div>
 
 <div class="overlay" id="overlay" onclick="closePreview()"></div>
 <div class="display-container" id="display-area">
     <h2 id="work-title">Preview</h2>
-    <img id="work-image" src="" style="width:100%; border-radius:10px;">
+    <img id="work-image" src="" style="width:100%; border-radius:12px;">
     <p id="work-desc" style="margin:15px 0; color:#666;"></p>
     <div id="price" style="font-size:2rem; color:#e74c3c; font-weight:bold;"></div>
     <a id="wa-link" href="#" target="_blank" class="whatsapp-btn">Order on WhatsApp</a>
 </div>
 
 <footer>
-    <p><b>Janhvi Creations</b> | Graphics & DTP Studio</p>
+    <p><b>Janhvi Creations</b> | Graphics Studio</p>
     <p>Contact: +91 7702317640</p>
 </footer>
 
 <script>
     const workData = {
-        'flex_pol': { title: 'Political Flex', img: 'kashi.jpg', desc: 'Custom Political Banner.', price: '₹149/-', waMsg: 'I want Flex Banner' },
-        'logo_pro': { title: 'Pro Logo', img: 'logo.jpg', desc: 'Branding Logo Design.', price: '₹149/-', waMsg: 'I want Logo Design' },
-        'office_dtp': { title: 'Office DTP', img: 'https://via.placeholder.com/600x400?text=MS+Office', desc: 'Typing and Documentation.', price: '₹99/-', waMsg: 'I want MS Office Work' },
-        'status_vid': { title: 'WhatsApp Status', img: 'https://via.placeholder.com/600x400?text=WhatsApp+Status', desc: 'Custom Video Status.', price: '₹49/-', waMsg: 'I want WhatsApp Status' },
-        'album_des': { title: 'Album Design', img: 'https://via.placeholder.com/600x400?text=Album+Design', desc: 'High Quality Album Sheets.', price: '₹299/-', waMsg: 'I want Album Design' },
-        'wc_card': { title: 'Wedding Card', img: 'invitation.jpg', desc: 'Traditional Wedding Card.', price: '₹149/-', waMsg: 'I want Wedding Card' },
-        'death_ban': { title: 'Death Banner', img: 'https://via.placeholder.com/600x400?text=Memorial', desc: 'Memorial Service Banner.', price: '₹99/-', waMsg: 'I want Death Banner' }
+        'flex_1': { title: 'Flex Banner', img: 'flex_sample.jpg', desc: 'High Quality Flex Design.', price: '₹149/-' },
+        'inv_1': { title: 'Invitation Card', img: 'invitation_psd.jpg', desc: 'Traditional Wedding Card Design.', price: '₹199/-' },
+        'sts_1': { title: 'WhatsApp Status', img: 'status_sample.jpg', desc: 'Creative Video Status Making.', price: '₹99/-' },
+        'pam_1': { title: 'Pamphlet', img: 'pamphlet_psd.jpg', desc: 'Business Promotion Pamphlet.', price: '₹149/-' },
+        'frm_1': { title: 'Photo Frame', img: 'frame_psd.jpg', desc: 'Custom Gift Photo Frames.', price: '₹299/-' },
+        'log_1': { title: 'Logo Design', img: 'logo_psd.jpg', desc: 'Professional Brand Logo.', price: '₹149/-' }
     };
 
     function showCategory(id) {
         document.getElementById('main-view').style.display = 'none';
         document.getElementById('category-view').style.display = 'block';
-        document.getElementById('back-btn').style.display = 'block';
         const grids = document.querySelectorAll('.product-grid');
         grids.forEach(g => g.style.display = 'none');
         document.getElementById(id).style.display = 'grid';
@@ -173,7 +179,7 @@
         document.getElementById('work-image').src = data.img;
         document.getElementById('work-desc').innerText = data.desc;
         document.getElementById('price').innerText = data.price;
-        document.getElementById('wa-link').href = "https://wa.me/917702317640?text=" + encodeURIComponent(data.waMsg);
+        document.getElementById('wa-link').href = "https://wa.me/917702317640?text=" + encodeURIComponent("I want " + data.title + " service.");
         document.getElementById('overlay').style.display = 'block';
         document.getElementById('display-area').style.display = 'block';
     }
@@ -183,5 +189,6 @@
         document.getElementById('display-area').style.display = 'none';
     }
 </script>
+
 </body>
 </html>

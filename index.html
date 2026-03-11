@@ -5,46 +5,72 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Janhvi Creations | Premium Store</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&family=Playfair+Display:ital,wght@0,700;1,700&display=swap');
+        
         body { margin: 0; font-family: 'Poppins', sans-serif; background-color: #f4f7f6; color: #333; }
-        
         .navbar { background: #fff; padding: 15px 20px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000; }
-        
-        /* Header with janhvi.jpg on both sides */
+
+        /* --- STYLISH TITLE SECTION START --- */
         .header { 
             background: #1e469a; 
             color: white; 
             display: flex; 
             justify-content: center; 
             align-items: center; 
-            padding: 20px 10px; 
+            padding: 35px 10px; 
             border-bottom: 5px solid #f1c40f; 
-            gap: 15px;
+            gap: 20px; 
         }
-        .header-logo {
-            width: 70px; 
-            height: 70px; 
+
+        .header-logo { 
+            width: 80px; 
+            height: 80px; 
             border-radius: 50%; 
             object-fit: cover; 
-            border: 3px solid #f1c40f;
-            background: #fff;
+            border: 3px solid #f1c40f; 
+            background: #fff; 
+            box-shadow: 0 0 15px rgba(241, 196, 15, 0.3);
         }
+
         .header-text { text-align: center; }
-        .header-text h1 { margin: 0; font-size: 1.8rem; }
-        .header-text p { margin: 5px 0 0 0; font-size: 0.9rem; }
+
+        /* Janhvi Creations - Premium Gold Gradient Style */
+        .header-text h1 { 
+            margin: 0; 
+            font-family: 'Playfair Display', serif; /* Elegant Serif Font */
+            font-size: 2.8rem; 
+            font-weight: 800; 
+            letter-spacing: 1px;
+            background: linear-gradient(to bottom, #fff 20%, #f1c40f 60%, #d4af37 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            filter: drop-shadow(2px 2px 2px rgba(0,0,0,0.5));
+            text-transform: capitalize;
+        }
+
+        /* Premium Graphic Designs - Sleek Style */
+        .header-text p { 
+            margin: 2px 0 0 0; 
+            font-size: 0.95rem; 
+            font-weight: 400;
+            color: #f1c40f;
+            text-transform: uppercase;
+            letter-spacing: 5px; /* Spaced out look */
+            border-top: 1px solid rgba(241, 196, 15, 0.4);
+            display: inline-block;
+            padding-top: 3px;
+        }
+        /* --- STYLISH TITLE SECTION END --- */
 
         .scrolling-text { background: #f1c40f; color: #1e469a; padding: 10px; font-weight: bold; }
         .container { max-width: 1200px; margin: 30px auto; padding: 0 20px; }
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
-        
         .card { background: white; border-radius: 12px; overflow: hidden; cursor: pointer; transition: 0.3s; border: 1px solid #ddd; text-align: center; }
         .card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); border-color: #1e469a; }
         .card img { width: 100%; height: 180px; object-fit: cover; }
         .card-title { padding: 15px; font-weight: bold; color: #1e469a; }
-
         .sub-grid { display: none; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 20px; }
         .back-btn { background: #1e469a; color: white; padding: 10px 20px; border-radius: 5px; cursor: pointer; display: none; margin-bottom: 20px; border: none; font-weight: bold; }
-
         .modal-overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 2000; }
         .modal-content { display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 90%; max-width: 450px; background: white; padding: 20px; border-radius: 15px; z-index: 2100; text-align: center; }
         .modal-img { width: 100%; border-radius: 10px; margin-bottom: 15px; border: 1px solid #eee; }
@@ -69,8 +95,7 @@
 </div>
 
 <div class="scrolling-text">
-    <marquee>⭐ ఫ్లెక్స్ బ్యానర్లు, ఇన్విటేషన్ కార్డ్స్, DTP వర్క్స్, పాంప్లెట్స్, సర్టిఫికెట్స్, శ్రద్ధాంజలి, విజిటింగ్ కార్డ్ డిజైన్ మరియు లోగోలు చేయబడును సంప్రదించండి: 7702317640 // Flex Banners | Invitation Cards | DTP Works | Pamphlets | Certificates | Memorial Designs | Visiting Cards | Logo Design
-    For all your design needs, Contact: 7702317640⭐</marquee>
+    <marquee>⭐ ఫ్లెక్స్ బ్యానర్లు | ఇన్విటేషన్ కార్డ్స్ | DTP వర్క్స్ | పాంప్లెట్స్ | సర్టిఫికెట్స్ | శ్రద్ధాంజలి | విజిటింగ్ కార్డ్ మరియు లోగోలు చేయబడును. సంప్రదించండి: 7702317640 //Flex Banners | Invitation Cards | DTP Works | Pamphlets | Certificates | Memorial Designs | WhatsApp Status | Logo Design⭐</marquee>
 </div>
 
 <div class="container" id="main-section">
@@ -81,7 +106,7 @@
         <div class="card" onclick="openCat('dtp-box')"><img src="apllication.jpg"><div class="card-title">DTP Works</div></div>
         <div class="card" onclick="openCat('pam-box')"><img src="pomplate.jpg"><div class="card-title">Pamphlets</div></div>
         <div class="card" onclick="openCat('cert-box')"><img src="certifacate.jpg"><div class="card-title">Certificates</div></div>
-        <div class="card" onclick="openCat('death-box')"><img src="death.jpg"><div class="card-title">Death Designs</div></div>
+        <div class="card" onclick="openCat('death-box')"><img src="death.jpg"><div class="card-title">Memorial Designs</div></div>
         <div class="card" onclick="openCat('stat-box')"><img src="visiting card.jpg"><div class="card-title">Visiting Cards</div></div>
         <div class="card" onclick="openCat('logo-box')"><img src="logo.jpg"><div class="card-title">Logo Designs</div></div>
     </div>
@@ -89,26 +114,21 @@
 
 <div class="container" id="detail-section" style="display:none;">
     <button class="back-btn" id="btn-back" onclick="goBack()">← Back to Menu</button>
+    <div id="flex-box" class="sub-grid">
+        <div class="card" onclick="showPop('f1')"><img src="kashi.jpg"><div class="card-title">Flex Banner 1<br>₹149/-</div></div>
+        <div class="card" onclick="showPop('f2')"><img src="birthday.jpg"><div class="card-title">Birthday Flex<br>₹199/-</div></div>
+        <div class="card" onclick="showPop('f3')"><img src="ayyappa.jpg"><div class="card-title">Ayyapa Flex<br>₹199/-</div></div>
+    </div>
+    <div id="inv-box" class="sub-grid">
+    <div class="card" onclick="showPop('i1')"><img src="invitation.jpg"><div class="card-title">Wedding Card 1<br>₹199/-</div></div>
     
-    <div id="flex-box" class="sub-grid"><div class="card" onclick="showPop('f1')"><img src="kashi.jpg"><div class="card-title">Flex Banner<br>₹149/-</div></div></div>
-    <div id="inv-box" class="sub-grid"><div class="card" onclick="showPop('i1')"><img src="invitation.jpg"><div class="card-title">Wedding Card<br>₹199/-</div></div></div>
+    <div class="card" onclick="showPop('i2')"><img src="invitation1.jpg"><div class="card-title">Premium Wedding Card<br>₹199/-</div></div>
+</div>
     <div id="pam-box" class="sub-grid"><div class="card" onclick="showPop('p1')"><img src="pomplate.jpg"><div class="card-title">Pamphlet<br>₹149/-</div></div></div>
     <div id="cert-box" class="sub-grid"><div class="card" onclick="showPop('c1')"><img src="certifacate.jpg"><div class="card-title">Certificate<br>₹99/-</div></div></div>
-    <div id="dtp-box" class="sub-grid"><div class="card" onclick="showPop('d2')"><img src="apllication.jpg"><div class="card-title">School Registration Form<br>₹99/-</div></div></div>
-    
-    <div id="death-box" class="sub-grid">
-        <div class="card" onclick="showPop('de1')">
-            <img src="death.jpg">
-            <div class="card-title">Death Memorial Card<br>₹249/-</div>
-        </div>
-    </div>
-
-    <div id="stat-box" class="sub-grid">
-    <div class="card" onclick="showPop('s1')">
-        <img src="whatsapp.jpg" style="width:100%; height:180px; object-fit:cover;">
-        <div class="card-title">Video Status Editing<br>₹99/-</div>
-    </div>
-</div>
+    <div id="dtp-box" class="sub-grid"><div class="card" onclick="showPop('d2')"><img src="apllication.jpg"><div class="card-title">School Form<br>₹99/-</div></div></div>
+    <div id="death-box" class="sub-grid"><div class="card" onclick="showPop('de1')"><img src="death.jpg"><div class="card-title">Memorial Card<br>₹149/-</div></div></div>
+    <div id="stat-box" class="sub-grid"><div class="card" onclick="showPop('s1')"><img src="visiting card.jpg"><div class="card-title">Visiting Card<br>₹99/-</div></div></div>
     <div id="logo-box" class="sub-grid"><div class="card" onclick="showPop('l1')"><img src="logo.jpg"><div class="card-title">Logo Design<br>₹149/-</div></div></div>
 </div>
 
@@ -121,17 +141,21 @@
 </div>
 
 <footer style="background:#1e469a; color:white; text-align:center; padding:20px; margin-top:50px;">
-    Janhvi Creations | Graphics Studio | 7702317640
+    Janhvi Creations | 7702317640
 </footer>
 
 <script>
     const info = {
         'f1': { n: 'Flex Banner', p: '₹149/-', m: 'kashi.jpg' },
+        'f2': { n: 'Birthday Flex', p: '₹199/-', m: 'birthday.jpg' },
+        'f3': { n: 'Ayyappa Flex', p: '₹199/-', m: 'ayyappa.jpg' },      
         'i1': { n: 'Invitation', p: '₹199/-', m: 'invitation.jpg' },
+        'i2': { n: 'Invitation', p: '₹199/-', m: 'invitation1.jpg' },
         'c1': { n: 'Certificate', p: '₹99/-', m: 'certifacate.jpg' },
         'p1': { n: 'Pamphlet', p: '₹149/-', m: 'pomplate.jpg' },
-        'd2': { n: 'School Registration Form', p: '₹99/-', m: 'apllication.jpg' },
-        'de1': { n: 'Death Memorial Card', p: '₹249/-', m: 'death.jpg' }, // Updated Info
+        'd2': { n: 'School Form', p: '₹99/-', m: 'apllication.jpg' },
+        'de1': { n: 'Memorial Card', p: '₹149/-', m: 'death.jpg' },
+        's1': { n: 'Visiting Card', p: '₹99/-', m: 'visiting card.jpg' },
         'l1': { n: 'Logo Design', p: '₹149/-', m: 'logo.jpg' }
     };
 
@@ -156,7 +180,8 @@
         document.getElementById('pop-title').innerText = d.n;
         document.getElementById('pop-img').src = d.m;
         document.getElementById('pop-price').innerText = d.p;
-        document.getElementById('pop-link').href = "https://wa.me/917702317640?text=I want to order: " + d.n + " (Price: " + d.p + ")";
+        const waMsg = encodeURIComponent("Hello Janhvi Creations, I want to order: " + d.n + " (Price: " + d.p + ")");
+        document.getElementById('pop-link').href = "https://wa.me/917702317640?text=" + waMsg;
         document.getElementById('mask').style.display = 'block';
         document.getElementById('pop-box').style.display = 'block';
     }

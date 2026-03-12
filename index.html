@@ -3,11 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <meta name="google-site-verification" content=<meta name="google-site-verification" content="yqk9KI6Na3JSZOQwqzyTfvVvtB_kDITTxo4ve_BFfBg" /> />
-
     <title>Janhvi Creations | Premium Store</title>
-    
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&family=Playfair+Display:ital,wght@0,700;1,700&display=swap');
         
@@ -41,7 +37,7 @@
         /* Janhvi Creations - Premium Gold Gradient Style */
         .header-text h1 { 
             margin: 0; 
-            font-family: 'Playfair Display', serif; 
+            font-family: 'Playfair Display', serif; /* Elegant Serif Font */
             font-size: 2.8rem; 
             font-weight: 800; 
             letter-spacing: 1px;
@@ -52,13 +48,14 @@
             text-transform: capitalize;
         }
 
+        /* Premium Graphic Designs - Sleek Style */
         .header-text p { 
             margin: 2px 0 0 0; 
             font-size: 0.95rem; 
             font-weight: 400;
             color: #f1c40f;
             text-transform: uppercase;
-            letter-spacing: 5px; 
+            letter-spacing: 5px; /* Spaced out look */
             border-top: 1px solid rgba(241, 196, 15, 0.4);
             display: inline-block;
             padding-top: 3px;
@@ -98,7 +95,7 @@
 </div>
 
 <div class="scrolling-text">
-    <marquee>⭐ ఫ్లెక్స్ బ్యానర్లు | ఇన్విటేషన్ కార్డ్స్ | DTP వర్క్స్ | పాంప్లెట్స్ | సర్టిఫికెట్స్ | శ్రద్ధాంజలి | విజిటింగ్ కార్డ్ మరియు లోగోలు చేయబడును. సంప్రదించండి: 7702317640 ⭐</marquee>
+    <marquee>⭐ ఫ్లెక్స్ బ్యానర్లు | ఇన్విటేషన్ కార్డ్స్ | DTP వర్క్స్ | పాంప్లెట్స్ | సర్టిఫికెట్స్ | శ్రద్ధాంజలి | విజిటింగ్ కార్డ్ మరియు లోగోలు చేయబడును. సంప్రదించండి: 7702317640 //Flex Banners | Invitation Cards | DTP Works | Pamphlets | Certificates | Memorial Designs | WhatsApp Status | Logo Design⭐</marquee>
 </div>
 
 <div class="container" id="main-section">
@@ -123,9 +120,76 @@
         <div class="card" onclick="showPop('f3')"><img src="ayyappa.jpg"><div class="card-title">Ayyapa Flex<br>₹199/-</div></div>
     </div>
     <div id="inv-box" class="sub-grid">
-        <div class="card" onclick="showPop('i1')"><img src="invitation.jpg"><div class="card-title">Wedding Card 1<br>₹199/-</div></div>
-        <div class="card" onclick="showPop('i2')"><img src="invitation1.jpg"><div class="card-title">Premium Wedding Card<br>₹199/-</div></div>
-    </div>
+    <div class="card" onclick="showPop('i1')"><img src="invitation.jpg"><div class="card-title">Wedding Card 1<br>₹199/-</div></div>
+    
+    <div class="card" onclick="showPop('i2')"><img src="invitation1.jpg"><div class="card-title">Premium Wedding Card<br>₹199/-</div></div>
+</div>
     <div id="pam-box" class="sub-grid"><div class="card" onclick="showPop('p1')"><img src="pomplate.jpg"><div class="card-title">Pamphlet<br>₹149/-</div></div></div>
-    <div id="cert-box" class="sub-grid"><div class="card" onclick="showPop('c1')"><img src
+    <div id="cert-box" class="sub-grid"><div class="card" onclick="showPop('c1')"><img src="certifacate.jpg"><div class="card-title">Certificate<br>₹99/-</div></div></div>
+    <div id="dtp-box" class="sub-grid"><div class="card" onclick="showPop('d2')"><img src="apllication.jpg"><div class="card-title">School Form<br>₹99/-</div></div></div>
+    <div id="death-box" class="sub-grid"><div class="card" onclick="showPop('de1')"><img src="death.jpg"><div class="card-title">Memorial Card<br>₹149/-</div></div></div>
+    <div id="stat-box" class="sub-grid"><div class="card" onclick="showPop('s1')"><img src="visiting card.jpg"><div class="card-title">Visiting Card<br>₹99/-</div></div></div>
+    <div id="logo-box" class="sub-grid"><div class="card" onclick="showPop('l1')"><img src="logo.jpg"><div class="card-title">Logo Design<br>₹149/-</div></div></div>
+</div>
 
+<div class="modal-overlay" id="mask" onclick="closePop()"></div>
+<div class="modal-content" id="pop-box">
+    <h2 id="pop-title">Preview</h2>
+    <img id="pop-img" src="" class="modal-img">
+    <div class="price" id="pop-price"></div>
+    <a id="pop-link" href="#" target="_blank" class="wa-button">Order on WhatsApp</a>
+</div>
+
+<footer style="background:#1e469a; color:white; text-align:center; padding:20px; margin-top:50px;">
+    Janhvi Creations | 7702317640
+</footer>
+
+<script>
+    const info = {
+        'f1': { n: 'Flex Banner', p: '₹149/-', m: 'kashi.jpg' },
+        'f2': { n: 'Birthday Flex', p: '₹199/-', m: 'birthday.jpg' },
+        'f3': { n: 'Ayyappa Flex', p: '₹199/-', m: 'ayyappa.jpg' },      
+        'i1': { n: 'Invitation', p: '₹199/-', m: 'invitation.jpg' },
+        'i2': { n: 'Invitation', p: '₹199/-', m: 'invitation1.jpg' },
+        'c1': { n: 'Certificate', p: '₹99/-', m: 'certifacate.jpg' },
+        'p1': { n: 'Pamphlet', p: '₹149/-', m: 'pomplate.jpg' },
+        'd2': { n: 'School Form', p: '₹99/-', m: 'apllication.jpg' },
+        'de1': { n: 'Memorial Card', p: '₹149/-', m: 'death.jpg' },
+        's1': { n: 'Visiting Card', p: '₹99/-', m: 'visiting card.jpg' },
+        'l1': { n: 'Logo Design', p: '₹149/-', m: 'logo.jpg' }
+    };
+
+    function openCat(id) {
+        document.getElementById('main-section').style.display = 'none';
+        document.getElementById('detail-section').style.display = 'block';
+        document.getElementById('btn-back').style.display = 'block';
+        document.querySelectorAll('.sub-grid').forEach(s => s.style.display = 'none');
+        document.getElementById(id).style.display = 'grid';
+        window.scrollTo(0,0);
+    }
+
+    function goBack() {
+        document.getElementById('main-section').style.display = 'block';
+        document.getElementById('detail-section').style.display = 'none';
+        document.getElementById('btn-back').style.display = 'none';
+    }
+
+    function showPop(key) {
+        const d = info[key];
+        if(!d) return;
+        document.getElementById('pop-title').innerText = d.n;
+        document.getElementById('pop-img').src = d.m;
+        document.getElementById('pop-price').innerText = d.p;
+        const waMsg = encodeURIComponent("Hello Janhvi Creations, I want to order: " + d.n + " (Price: " + d.p + ")");
+        document.getElementById('pop-link').href = "https://wa.me/917702317640?text=" + waMsg;
+        document.getElementById('mask').style.display = 'block';
+        document.getElementById('pop-box').style.display = 'block';
+    }
+
+    function closePop() {
+        document.getElementById('mask').style.display = 'none';
+        document.getElementById('pop-box').style.display = 'none';
+    }
+</script>
+</body>
+</html>
